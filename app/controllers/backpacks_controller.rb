@@ -1,2 +1,0 @@
-class BackpacksController < ApplicationController
-end

@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+hoth = Planet.create(name: "Hoth", terrain: "Snowy Mountains", temp_range: "-450,000 celcignar to 40 celcignar", vegetation: "none", animals: "ton-tons", local_beings: "scavengers", backpack: "snowpack")

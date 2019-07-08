@@ -1,0 +1,7 @@
+<h1>Star BnB</h1>
+<h2>List of Planets</h2>
+<%@planets.each do |p|%>
+<ul>
+    <li><%=link_to("#{p.name}", planet_path(p))%></li>
+</ul>
+<%end%>

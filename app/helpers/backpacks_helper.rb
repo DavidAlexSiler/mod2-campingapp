@@ -1,0 +1,2 @@
+module BackpacksHelper
+end

@@ -1,0 +1,2 @@
+class BackpacksController < ApplicationController
+end

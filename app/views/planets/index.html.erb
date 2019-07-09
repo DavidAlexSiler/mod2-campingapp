@@ -1,8 +1,9 @@
-<h1>Star BnB</h1>
-<h2>List of Planets</h2>
-<%@planets.each do |p|%>
-<ul>
-    <img src = "<%= p.planet_img_url%>" width="300" height="300" >
-    <li><%=link_to("#{p.name}", planet_path(p))%></li>
-</ul>
+
+
+<% @planets.each do |p| %>
+    <img src = "<%= p.planet_img_url%>" width="300" height="300" />
+    <li>
+        <%= link_to("#{p.name}", planet_path(p)) %>
+    </li>
+
 <%end%>

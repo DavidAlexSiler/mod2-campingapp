@@ -1,0 +1,11 @@
+<h1><%=@note.title%></h1>
+
+<p><%=@note.blog%></p>
+
+<img src ="<%=@note.img_url%>">
+
+<%= button_to("Edit this note", edit_note_path(@note), method: :get)%>
+
+<%= button_to("Delete this note.", note_path(@note), method: :delete)%>
+
+

@@ -4,4 +4,8 @@
 
 <h3><%= @user.age%></h3>
 
+
+<%= button_to("Make a Note!", new_note_path, method: :get)%>
+<%= button_to("View all Notes", notes_path, method: :get)%>
+
 <%= button_to("Delete!", user_path(@user), method: :delete)%>

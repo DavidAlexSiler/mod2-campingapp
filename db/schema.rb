@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 2019_07_08_182532) do
     t.integer "user_id"
     t.text "blog"
     t.string "img_url"
+    t.string "title"
+    t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
   create_table "planets", force: :cascade do |t|

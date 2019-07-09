@@ -8,4 +8,6 @@
 
 <%= button_to("Delete this note.", note_path(@note), method: :delete)%>
 
+<%= button_to("Back to my profile", user_path(session[:user_id]), method: :get) %>
+
 

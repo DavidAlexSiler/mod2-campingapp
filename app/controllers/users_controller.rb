@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :authenticate!
+    before_action :authenticate!, except: [:new]
 
 
     def index

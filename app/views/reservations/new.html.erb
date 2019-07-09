@@ -1,0 +1,9 @@
+<h1>Book a Reservation</h1>
+<h3>Reservation time slots are based on peak camping season!</h3>
+
+<%= form_for @reservation do |f| %>
+    Planet    : <%= f.collection_select(:planet_id, Planet.all, :id, :name)%><br />
+    Dates     : <%= f.select :date_time, ['August 5-10', 'August 15-20', 'September 5-10', 'September 15-20']%><br />
+    Price     : <%= f.select :cost, ['Gold package - 5,000 units', 'Silver package - 2,500 units]', 'Bronze package - 1,000 units', 'Roughin it - 50 units'] %><br />
+    <%= f.submit %>
+<% end %>

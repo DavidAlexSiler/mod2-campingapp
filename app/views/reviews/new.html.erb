@@ -1,0 +1,19 @@
+<h1>Create a review</h1>
+<h3>Create a review</h3>
+<%= form_for(@review) do |f| %>
+        <%= f.label "Review Title" %>
+        <%= f.text_field :title %>
+        <div>
+        <%= f.label :Planet %>
+        <%= f.collection_select(:planet_id, Planet.all, :id, :name) %></p>
+        <div>
+        <%= f.label "Planet Review" %>
+        <%= f.text_area :planet_review %>
+        <div>
+        <%= f.label :Image %>
+        <%= f.text_field :img_url %>
+        <div>
+        <%= f.label "Planet Rating" %>
+        <%= f.text_field :rating %>
+        <%= f.submit %>
+        <%end%>

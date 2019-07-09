@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
+    before_action :authenticate!
 
     def show
         @user = User.find(params[:id])
+        @reviews = @user.my_reviews
     end 
 
     def new

@@ -5,8 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Planet.delete_all
-User.delete_all
+
+Planet.destroy_all
+User.destroy_all
+Note.destroy_all
+Review.destroy_all
 
 #planets
 hoth = Planet.create(

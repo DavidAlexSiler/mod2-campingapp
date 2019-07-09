@@ -1,0 +1,7 @@
+<h1>All Notes</h1>
+
+<%@notes.each do |note|%>
+<ul>
+    <%=link_to("#{note.title}", note_path(note))%>
+</ul>
+<%end%>

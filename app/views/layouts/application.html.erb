@@ -10,6 +10,8 @@
   </head>
 
   <body>
+  <%=button_to("login", login_path, method: :get)%>
+  <%=button_to("logout", logout_path, method: :delete)%>
   <p> <%= flash[:info] %></p>
     <%= yield %>
   </body>

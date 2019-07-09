@@ -8,6 +8,8 @@ class Planets < ActiveRecord::Migration[5.2]
       t.string :animals
       t.string :local_beings
       t.string :backpack
+      t.string :img_url
+      t.string :planet_img_url
     end
   end
 end

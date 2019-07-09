@@ -1,11 +1,15 @@
-<img src = "<%= @user.img_url%>" width="500" height="600" >
+<img src = "<%= @user.img_url%>" width="300" height="300" >
 <h1><%= @user.name%></h1>
 <h3><%= @user.bio%></h3>
 
 <h3><%= @user.age%></h3>
-
-
 <%= button_to("Make a Note!", new_note_path, method: :get)%>
 <%= button_to("View all Notes", notes_path, method: :get)%>
-
 <%= button_to("Delete!", user_path(@user), method: :delete)%>
+
+<h1>My reviews</h1>
+<%@reviews.each do |review| %>
+    <%= link_to("#{review.title}", review_path(review)) %>
+    <%end%>
+
+

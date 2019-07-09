@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 2019_07_08_182532) do
     t.string "animals"
     t.string "local_beings"
     t.string "backpack"
+    t.string "img_url"
+    t.string "planet_img_url"
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -38,6 +40,7 @@ ActiveRecord::Schema.define(version: 2019_07_08_182532) do
   end
 
   create_table "reviews", force: :cascade do |t|
+    t.string "title"
     t.integer "user_id"
     t.integer "planet_id"
     t.text "planet_review"

@@ -1,9 +1,16 @@
-<h1><%=@planet.name%></h1>
-<h3><%=@planet.terrain%></h3>
-<h3><%=@planet.temp_range%></h3>
-<h3><%=@planet.vegetation%></h3>
-<h3><%=@planet.animals%></h3>
-<h3><%=@planet.local_beings%></h3>
-<h3><%=@planet.backpack%></h3>
+<img src = "<%= @planet.img_url%>" width="300" height="300" >
+<h1>Planet Name: <%=@planet.name%></h1>
+<h3>Terrain: <%=@planet.terrain%></h3>
+<h3>Temperature: <%=@planet.temp_range%></h3>
+<h3>Vegetation: <%=@planet.vegetation%></h3>
+<h3>Animals: <%=@planet.animals%></h3>
+<h3>Creatures: <%=@planet.local_beings%></h3>
+<h3>Backpack: <%=@planet.backpack%></h3>
+<br>
+<br>
+<h1>Planet Reviews</h1>
+<%@reviews.each do |review| %>
+    <%= link_to("#{review.title}", review_path(review)) %>
+    <%end%>
 
 

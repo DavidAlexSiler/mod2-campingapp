@@ -1,0 +1,8 @@
+<h1><%=@reservation.user.name%>'s new reservation</h1>
+<img src= "<%=@reservation.planet.img_url%>"><br />
+<h2><%=@reservation.planet.name%></h2>
+<h3><%=@reservation.date_time%></h3>
+<h3><%=@reservation.cost%></h3>
+
+
+<%= button_to("Back to my profile", user_path(session[:user_id]), method: :get) %>

@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
-    before_action :authenticate!, except: [:new]
-
+    before_action :authenticate!, except: [:new, :create]
 
 
     def index
@@ -20,6 +19,8 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
+            session[:user_id] = @user.id 
+            flash[:info] = "You are logged in"
             redirect_to user_path(@user)
         else
             render :new

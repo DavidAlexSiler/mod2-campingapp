@@ -14,4 +14,6 @@
 
         <%=button_to("logout", logout_path, method: :delete)%>
   <p> <%= flash[:info] %></p>
+
+    <%= render("form") %>
   </body>

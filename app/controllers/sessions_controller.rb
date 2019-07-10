@@ -14,6 +14,8 @@ class SessionsController < ApplicationController
             @error = "No such username or wrong email"
             render :new 
         end 
+        ahoy.authenticate(@user)
+
     end 
 
     def destroy

@@ -4,6 +4,8 @@ class User < ApplicationRecord
     has_many :reviews
 
     has_secure_password
+    has_many :visits, class_name: "Ahoy::Visit"
+
 
     # validates :username, presence: true, uniqueness: true
     
@@ -13,5 +15,15 @@ class User < ApplicationRecord
             review.user.id = self.id  
         end 
     end 
+
+    def my_first_review
+        my_reviews.first
+    end
+
+    def my_last_review
+        my_reviews.last
+    end
+
+
     
 end

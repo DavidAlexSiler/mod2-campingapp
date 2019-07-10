@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     helper_method :current_user
-    # after_action :track_action
+    after_action :track_action
 
     
     
@@ -16,9 +16,9 @@ class ApplicationController < ActionController::Base
         end
     end
     
-    # protected
-
-    # def track_action
-    #     ahoy.track "Ran action", request.path_parameters
-    # end
+    protected
+  
+    def track_action
+    ahoy.track "Ran action", request.path_parameters
+    end
 end

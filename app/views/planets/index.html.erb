@@ -3,6 +3,7 @@
 <body>
 
 
+
 <!-- top image -->
 <!--<div class="hero-image">
   <div class="hero-text">
@@ -140,7 +141,7 @@
     <div class='row'>
       <% group.each do |planet| %>
         <div class='col-md-3'>
-        <p><%= planet.name %></p>
+        <p class="name"><%= planet.name %></p>
           <a href="<%= planet_path(planet)%>">
             <img src="<%= planet.planet_img_url %>" />
             </a>

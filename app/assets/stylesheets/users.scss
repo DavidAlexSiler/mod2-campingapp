@@ -1,6 +1,12 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+background {
+    color: black;
+}
+
+
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 700px;
@@ -34,4 +40,20 @@
   
   button:hover, a:hover {
     opacity: 0.7;
+  }
+
+  /* Style buttons */
+.btn {
+    background-color: grayscale($color: #000000); /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 10px 20px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    width: 20%;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: grayscale($color: #000000);
   }

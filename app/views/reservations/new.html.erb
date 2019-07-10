@@ -1,9 +1,16 @@
-<h1>Book a Reservation</h1>
-<h3>Reservation time slots are based on peak camping season!</h3>
+    <div class="container">
+        <img src="https://i.imgur.com/14mjtNe.jpg"  width="1000" height="300">
+        <div class="center"><h1>Book a Reservation</h1></div>
+      </div>
 
-<%= form_for @reservation do |f| %>
-    Planet    : <%= f.collection_select(:planet_id, Planet.all, :id, :name)%><br />
-    Dates     : <%= f.select :date_time, ['August 5-10', 'August 15-20', 'September 5-10', 'September 15-20']%><br />
-    Price     : <%= f.select :cost, ['Gold package - 5,000 units', 'Silver package - 2,500 units]', 'Bronze package - 1,000 units', 'Roughin it - 50 units'] %><br />
-    <%= f.submit %>
-<% end %>
+      <br>
+      <i><p>Reservation time slots are based on peak camping season!</p></i>
+
+    <%= form_for @reservation do |f| %>
+        Planet    : <%= f.collection_select(:planet_id, Planet.all, :id, :name)%><br />
+        Dates    : <%= f.select :date_time, ['August 5-10', 'August 15-20', 'September 5-10', 'September 15-20']%><br />
+        Price     : <%= f.select :cost, ['Gold package - 5,000 units', 'Silver package - 2,500 units]', 'Bronze package - 1,000 units', 'Roughin it - 50 units'] %><br />
+        <br>
+    <%= f.submit :Submit, class: 'button' %>
+    <% end %>
+

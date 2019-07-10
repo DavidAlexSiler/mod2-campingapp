@@ -1,19 +1,55 @@
-<h1>Login</h1>
 
-<% if @error %>
-    <p style="color: red;"><%= @error %></p>
-    <%end%>
+  <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    <%= form_tag do %>
-        <%= label_tag("Username: ") %>
-        <%= text_field_tag (:username) %>
-        <%= label_tag ("Password: ") %>
-        <%= password_field_tag (:password) %>
-        <%= submit_tag("login")%>
-        <%end%>
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 680px; 
+}
 
-        <%=button_to("logout", logout_path, method: :delete)%>
-  <p> <%= flash[:info] %></p>
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
 
-    <%= render("form") %>
-  </body>
+<div class="row">
+  <div class="column" style="background-color:#fff;">
+  <h1>Login</h1>
+  <% if @error %>
+      <p style="color: red;"><%= @error %></p>
+      <%end%>
+  
+      <%= form_tag do %>
+        <div>
+          <i><%= label_tag("Username: ") %></i>
+          <%= text_field_tag (:username) %>
+        </div>
+          <i><%= label_tag ("Password: ") %></i>
+          <%= password_field_tag (:password) %>
+          <div>
+          <%= submit_tag("login") %>
+          <%end%> </div>
+  
+  </div>
+  <div class="column" style="background-color:#bbb;">
+  <%= render("form") %>
+  </div>
+</div>
+
+</body>
+</html>
+

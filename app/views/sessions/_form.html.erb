@@ -1,24 +1,24 @@
 <h1>Create a user profile </h1>
 
 <%= form_for(@user) do |f| %>
-  <%= f.label :name %>
+  <i><%= f.label :name %></i>
   <%= f.text_field :name %>
   <div>
-  <%= f.label :age %>
+  <i><%= f.label :age %></i>
   <%= f.text_field :age %>
   <div>
-  <%= f.label :bio %>
+  <i><%= f.label :bio %></i>
   <%= f.text_area :bio %>
   <div>
-  <%= f.label :Image %>
+  <i><%= f.label :Image %></i>
   <%= f.text_field :img_url %>
   <div>
-  <%= f.label :username %>
+  <i><%= f.label :username %></i>
   <%= f.text_field :username %>
   <div>
-  <%= f.label :password %>
+  <i><%= f.label :password %></i>
   <%= f.password_field :password %>
   <div>
 
-  <%= f.submit %>
+  <%= f.submit class: 'button'%>
 <% end %>

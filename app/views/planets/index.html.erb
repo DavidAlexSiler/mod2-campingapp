@@ -1,9 +1,60 @@
+<html>
+
+<body>
 
 
-<% @planets.each do |p| %>
-    <img src = "<%= p.planet_img_url%>" width="300" height="300" />
-    <li>
-        <%= link_to("#{p.name}", planet_path(p)) %>
-    </li>
+<!-- top image -->
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>It's time to get away</h1>
+    <h3>pick your perfect destination</h3>
+  </div>
+</div>
+<br>
 
-<%end%>
+
+<div class="w3-container w3-dark-gray">
+  <p>Resize this responsive page!</p> 
+</div>
+
+<div class="w3-row-padding" id= "about">
+  <div class="w3-third">
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+    <p>It is the most populous city in the United Kingdom,
+    with a metropolitan area of over 13 million inhabitants.</p>
+  </div>
+
+  <div class="w3-third" id= "about">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p> 
+    <p>The Paris area is one of the largest population centers in Europe,
+    with more than 12 million inhabitants.</p>
+  </div>
+
+  <div class="w3-third" id= "about">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area,
+    and the most populous metropolitan area in the world.</p>
+  </div>
+</div>
+
+
+ 
+<!-- list of planets -->
+<% @planets.in_groups_of(4, false).each do |group| %>
+    <div class='row'>
+      <% group.each do |planet| %>
+        <div class='col-md-3'>
+        <p><%= planet.name %></p>
+          <a href="<%= planet_path(planet)%>">
+            <img src="<%= planet.planet_img_url %>" />
+            </a>
+          </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  </body>
+</html>

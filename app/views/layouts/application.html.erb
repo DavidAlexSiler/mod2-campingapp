@@ -5,6 +5,15 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!-- page divider -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Profile page -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--star rating -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--fonts-->
     <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
 
@@ -17,13 +26,17 @@
     <!--font style-->
     <style>
       body {
-        font-family: 'Poiret One', cursive;
-        font-size: 30px;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 20px;
       }
     </style>
   </head>
 
   <body>
+
+
+
+  <!--nav bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#"><img src="https://img.icons8.com/dotty/80/000000/star-half-empty.png">B&B</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,13 +48,23 @@
         <a class="nav-link" href="/planets">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/login">Login/logout</a>
+        <% if current_user %>
+        <li class="nav-item">
+          <%= link_to("User Profile", user_path(current_user), class: "nav-link") %>
+        </li>
+        <% else %>
+        <a class="nav-link" href="/login">Log in/ Create account</a>
+        <% end %>
+        
       </li>
+      <% if current_user %>
+        
+      <% end %>
       <li class="nav-item">
         <a class="nav-link" href="/About">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/reservations">Booking</a>
+        <a class="nav-link" href="/reservations/new">Booking</a>
       </li>
     
     </ul>

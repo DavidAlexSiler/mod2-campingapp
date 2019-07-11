@@ -2,31 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/* The hero image */
-.hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: 
-    url("https://content.pulse.ea.com/content/legacy/starwars-ea-com/en_GB/starwars/battlefront/news-articles/the-star-wars-battlefront-planets--creating-tatooine/_jcr_content/featuredImage/renditions/rendition1.img.jpg");
-  
-    /* Set a specific height */
-    height: 50%;
-  
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-  
-  /* Place text in the middle of the image */
-  .hero-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-  }
 
 
 
@@ -45,3 +20,12 @@ img {
     padding: 2%;
 
   }
+
+.planet_pic {
+  border-radius: 50%;
+}
+
+.land_image {
+  width: 1000px;
+  height: 50%;
+}

@@ -3,13 +3,11 @@
 
 
 <%@reservations.each do |reservation|%>
-<ul>
-    <li>
+
+    
     <%=reservation.planet.name %>  |  <%=reservation.date_time %>
     <%= button_to("Delete a reservation", reservation_path(reservation), method: :delete) %>
-    </li>
-</ul>
+    
+
 <%end%>
 
-<%= button_to("Delete a reservation", reservation_path(@reservation.id), method: :delete) %>
-<%= button_to("Back to my profile", user_path(session[:user_id]), method: :get) %>

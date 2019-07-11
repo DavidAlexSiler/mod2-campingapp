@@ -1,19 +1,17 @@
     <div class="card">
         <img src="<%= @user.img_url%>" alt="@user.name" style="width:100%">
-        
-            <h1><%= @user.name%></h1>
-                <p><%= @user.age%></p>
+
+            <h1><i class='fas fa-user-astronaut'></i><%=@user.name%></h1>
+                <p><i class='fas fa-birthday-cake'></i><%= @user.age%></p>
                 <p class="Bio"><%=@user.bio%></p>
             <div style="margin: 50px 0;">
-            <%=button_to("logout", logout_path, method: :delete)%>
+
   <p> <%= flash[:info] %></p>
 
-        <%=link_to("Notes", notes_path(current_user), class: "btn")%>
-        <%=link_to("Reservations", reservations_path(current_user), class: "btn")%>
-        <%=link_to("Delete Profile", users_path(current_user), class: "btn")%>
-        <%=link_to("Reviews", reviews_path(current_user), class: "btn")%>
+        <%=link_to("Notes", notes_path(current_user), method: :get, class: "btn")%>
+        <%=link_to("Reservations", reservations_path(current_user), method: :get, class: "btn")%>
+        <%=link_to("Reviews", reviews_path(current_user), method: :get,  class: "btn")%>
+        <%=link_to("Logout", logout_path, method: :delete, class: "btn")%>
+        <%=link_to("Delete Profile", users_path(current_user), method: :delete, class: "btn")%>
         
-        <h1>My reviews</h1>
-            <%@reviews.each do |review| %>
-            <%= link_to("#{review.title}", review_path(review), class: "btn" )%>
-        <%end%>
+

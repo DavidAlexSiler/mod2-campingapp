@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
 
     def destroy
         session[:user_id] = nil
-        redirect_to planets_path
+        redirect_to '/'
     end 
 
 

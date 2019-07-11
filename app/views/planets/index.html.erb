@@ -1,140 +1,36 @@
+
+
 <html>
+<head>
+<title>Title of the document</title>
+<style>
+body {
+  background-image: url("https://wallpaperplay.com/walls/full/e/0/a/54074.jpg");
+  background-color: #cccccc;
+}
+
+p {
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+</style>
+
+</head>
 
 <body>
-
-
-
-<!-- top image -->
-<!--<div class="hero-image">
-  <div class="hero-text">
-    <h1>Be mindful of the future, but not at the expense of the moment.</h1>
-    <h3>pick your perfect destination</h3>
-  </div>
-</div>
-<br>-->
-
-
-
-<div class="carousel-container">
-  
-  <ul class="carousel my-carousel carousel--scale">
-    <input class="carousel__activator" type="radio" id="P" name="scale" checked="checked"/>
-    <input class="carousel__activator" type="radio" id="Q" name="scale"/>
-    <input class="carousel__activator" type="radio" id="R" name="scale"/>
-    <input class="carousel__activator" type="radio" id="S" name="scale"/>
-    <input class="carousel__activator" type="radio" id="T" name="scale"/>
-    <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="T"></label>
-      <label class="carousel__control carousel__control--forward" for="Q"></label>
-    </div>
-    <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="P"></label>
-      <label class="carousel__control carousel__control--forward" for="R"></label>
-    </div>
-    <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="Q"></label>
-      <label class="carousel__control carousel__control--forward" for="S"></label>
-    </div>
-    <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="R"></label>
-      <label class="carousel__control carousel__control--forward" for="T"></label>
-    </div>
-    <div class="carousel__controls">
-      <label class="carousel__control carousel__control--backward" for="S"></label>
-      <label class="carousel__control carousel__control--forward" for="P"></label>
-    </div>
-    <li class="carousel__slide">
-      <div class="slide__label">
-      <div class="text-block"> 
-        <h1 class="box_font">Hoth</h1>
-        <p class="box_font">Be mindful of the future, but not at the expense of the moment.</p>
-      </div>
-      </div>
-    </li>
-    <li class="carousel__slide">
-      <div class="text-block" id="box_2"> 
-        <h1 class="box_font">Tatooine</h1>
-        <p class="box_font">Do. Or do not. There is no try.</p>
-      </div>
-    </li>
-    <li class="carousel__slide">
-      <div class="text-block" id="box_3"> 
-        <h1 class="box_font">Naboo</h1>
-        <p class="box_font">Your focus determines your reality.</p>
-      </div>
-    </li>
-    <li class="carousel__slide">
-      <div class="text-block"> 
-        <h1 class="box_font">Yavin 4</h1>
-        <p class="box_font">Many of the truths we cling to depend greatly on our point of view.</p>
-      </div>
-    </li>
-    <li class="carousel__slide">
-      <div class="text-block" id="box_2"> 
-        <h1 class="box_font">Kashyyyk</h1>
-        <p class="box_font">Never tell me the odds.</p>
-      </div>
-    </li>
-    <div class="carousel__indicators">
-      <label class="carousel__indicator" for="P"></label>
-      <label class="carousel__indicator" for="Q"></label>
-      <label class="carousel__indicator" for="R"></label>
-      <label class="carousel__indicator" for="S"></label>
-      <label class="carousel__indicator" for="T"></label>
-    </div>
-  </ul>
-</div>
-
-<!--<div class="w3-container w3-dark-gray">
-  <p>Resize this responsive page!</p> 
-</div>-->
-
-<div class="w3-row-padding">
-  <div class="w3-third">
-    <img src= "https://i.pinimg.com/originals/1d/fa/b5/1dfab576a8ef67dca1a7380db5102aac.jpg" class="prof">
-    <h2 class="about">Reina-bes Nhibbbyb, Founder</h2>
-    <p class="info">A Glee Anselm native, Nhibbbyb was a Peace Corps Medical Officer for 25 moons.</p>
-  </div>
-
-  <div class="w3-third">
-    <h2 class="about">About StarBnB</h2>
-    <p class="info">Poised to share their interplanetary knowledge, Vruska and Nhibbbyb 
-        started a guided camping adventure business that soon became Star BnB, 
-        which lets it’s members choose camp site and level of amenities.<br></br>
-
-        With Star BnB you can choose from our wide range of planets, reservation
-        time(based on ideal planetary condition periods), and which package you 
-        would like to purchase. Our packages range from the Gold standard of 
-        living all the way down to ‘Roughin it’, so you can choose your level of comfort.<br></br>
-
-        For each planet you will receive a specialized backpack with some necessary items
-        you will need for your adventure; from tools to help you navigate the lush 
-        jungles of Yavin 4, to specialized clothing specially designed to protect 
-        you from harsh the snowstorms of Hoth. You will also receive a notebook in 
-        which you can journal some of your experiences to help us make others' journeys
-        the experience of a lifetime.<br></br>
-
-        We hope you enjoy exploring these alien worlds as much as we enjoy sharing 
-        our knowledge with you.</p>
-  </div>
-
-  <div class="w3-third">
-    <img src="https://pm1.narvii.com/6603/9d774c063589e24400b3c8f48238a1c9085b5447_hq.jpg" class="prof">
-    <h2 class="about">uk-Alex Vruska, Co-Founder</h2>
-    <p class="info">A Chadra-Fan former Cargo Ship Engineer from the Outer-Rim planet of Chad.</p>
-  </div>
-</div>
 <br></br>
+<h1>Popular Destinations</h1>
 
-<h1 class="about">Popular Destinations</h1>
-
-
+<br></br>
 <!-- list of planets -->
 <% @planets.in_groups_of(4, false).each do |group| %>
     <div class='row'>
       <% group.each do |planet| %>
         <div class='col-md-3'>
-        <p class="name"><%= planet.name %></p>
+        <p><%= planet.name %></p>
           <a href="<%= planet_path(planet)%>">
             <img src="<%= planet.planet_img_url %>" class="planet_pic">
             </a>
@@ -145,3 +41,10 @@
 
   </body>
 </html>
+
+
+
+</body>
+
+</html>
+

@@ -1,7 +1,19 @@
-<h1>All Notes</h1>
 
-<%@notes.each do |note|%>
+
+
+<div class="split left">
+  <div class="centered">
+    <img src="https://us.moleskine.com/ccstore/v1/images/?source=/file/v1106978308646140597/products/gtin_8058647620268_01_1500x1500.jpg">
+  </div>
+</div>
+
+<div class="split right">
+  <div class="right_side_list">
+    <h1>My Journal.</h1>
+    <%@notes.each do |note|%>
 <ul>
-    <%=link_to("#{note.title}", note_path(note))%>
+    <i class='fas fa-pen-nib'></i><i><%=link_to("Field Notes on #{note.title}", note_path(note))%></i>
 </ul>
 <%end%>
+  </div>
+</div>

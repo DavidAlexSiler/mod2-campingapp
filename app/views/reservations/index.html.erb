@@ -1,13 +1,18 @@
-<h1>All Reservations</h1>
 
 
+<div class="split left">
+  <div class="centered">
+    <img src="https://i.pinimg.com/originals/48/83/40/48834011af43753afa57107c67e12dd5.png" width="200" height="600">
+  </div>
+</div>
 
-<%@reservations.each do |reservation|%>
-
-    
-    <%=reservation.planet.name %>  |  <%=reservation.date_time %>
-    <%= button_to("Delete a reservation", reservation_path(reservation), method: :delete) %>
-    
-
-<%end%>
+<div class="split right">
+  <div class="right_side_list">
+    <h1>My Reservations</h1>
+    <%@reservations.each do |reservation|%>
+        <%=reservation.planet.name %>  |  <%=reservation.date_time %>
+        <%= button_to("Delete a reservation", reservation_path(reservation), method: :delete) %>
+    <%end%>
+  </div>
+</div>
 

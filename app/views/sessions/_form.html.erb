@@ -1,6 +1,6 @@
 <h1>Create a user profile </h1>
 
-<%= form_for(@user) do |f| %>
+<%= form_for@user do |f| %>
   <i><%= f.label :name %></i>
   <%= f.text_field :name %>
   <div>
@@ -22,3 +22,5 @@
 
   <%= f.submit class: 'button'%>
 <% end %>
+
+

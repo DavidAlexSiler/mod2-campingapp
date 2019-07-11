@@ -22,8 +22,8 @@
 
   body, html {
     height: 100%;
+    
 }
-
 /* 
 /* The hero image */
 
@@ -39,8 +39,8 @@
   * Control & indicator mixin
 */
 .carousel {
-  height: 300px;
-  width: 400px;
+  height: 400px;
+  width: auto;
   overflow: hidden;
   text-align: center;
   position: relative;
@@ -186,7 +186,7 @@
   cursor: pointer;
   border-width: 5px 5px 0 0;
   border-style: solid;
-  border-color: #fafafa;
+  border-color: #f8f7f7;
   opacity: 0.35;
   outline: 0;
   z-index: 3;
@@ -267,11 +267,11 @@
           transform: scale(0);
 }
 .carousel__slide {
-  height: ;
-  
+  height: 100%;
   position: absolute;
   overflow-y: auto;
   opacity: 0;
+  
 }
 /**
   * Theming
@@ -279,44 +279,7 @@
 * {
   box-sizing: border-box;
 }
-html,
-body {
-  background-color: #111;
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  color: #fff;
-}
-.carousel-container {
-  display: inline-block;
-}
-.my-carousel {
-  border-radius: 5px;
-  margin: 30px;
-}
-.carousel__slide {
-  overflow: hidden;
-}
-.carousel--thumb .carousel__indicator {
-  height: 30px;
-  width: 30px;
-}
-h1 {
-  font-size: 50px;
-  line-height: 50px;
-  color: #fafafa;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  margin-top: -25px;
-}
-h2,
-h3 {
-  color: #fafafa;
-}
-h3 {
-  font-size: 50px;
-}
+
 .carousel__indicator {
   background-color: #fafafa;
 }
@@ -351,3 +314,7 @@ h3 {
   background-position: center;
 }
 
+.img {
+  height: "150px";
+  width: "100px";
+}

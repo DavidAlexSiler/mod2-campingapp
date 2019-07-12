@@ -9,7 +9,7 @@
     <%= form_for @reservation do |f| %>
         Planet    : <%= f.collection_select(:planet_id, Planet.all, :id, :name)%><br />
         Dates    : <%= f.select :date_time, ['Augyyst 5-10', 'Augyyst 15-20', 'Septzimbaar 5-10', 'Septzimbaar 15-20', 'Uyrkktobar 5-10', 'Uyrkktobar 15-20', 'Knowvrrmbir 5-10', 'Knowvrrmbir 15-20', 'Ten-ymmber 5-10', 'Ten-yember 15-20']%><br />
-        Price     : <%= f.select :cost, ['Gold package - 5,000 units', 'Silver package - 2,500 units]', 'Bronze package - 1,000 units', 'Roughin it - 50 units'] %><br />
+        Price     : <%= f.select :cost, ['Gold package - 5,000 units', 'Silver package - 2,500 units', 'Bronze package - 1,000 units', 'Roughin it - 50 units'] %><br />
         <br>
     <%= f.submit :Submit, class: 'button' %>
     <% end %>

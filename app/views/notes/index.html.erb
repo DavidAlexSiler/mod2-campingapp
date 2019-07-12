@@ -11,9 +11,11 @@
   <div class="right_side_list">
   
     <h1>My Journal</h1>
-    <%@notes.each do |note|%>
+
+    <%my_notes = current_user.notes%>
+    <%my_notes.each do |note|%>
 <ul>
-    <i class='fas fa-pen-nib'></i><i><%=link_to("Field Notes on #{note.title}", note_path(note))%></i>
+    <i class='fas fa-pen-nib'></i><i><%=link_to("#{note.title}", note_path(note))%></i>
 </ul>
 <%end%>
 

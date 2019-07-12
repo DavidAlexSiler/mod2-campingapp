@@ -9,7 +9,8 @@
 <div class="split right">
   <div class="right_side_list">
     <h1>My Reservations</h1>
-    <%@reservations.each do |reservation|%>
+    <%my_reso = current_user.reservations%>
+    <%my_reso.each do |reservation|%>
       <p>Date: <%= link_to("#{reservation.date_time}", reservation_path(reservation))%></p>
         <p>Planet: <%=reservation.planet.name %></p>
         <%= button_to("Delete a reservation", reservation_path(reservation), method: :delete) %>

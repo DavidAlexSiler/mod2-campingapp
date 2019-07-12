@@ -1,16 +1,13 @@
-<h1>Planet: <%=@note.title%></h1>
+<h1><%=@note.title%></h1>
 
-<p>Field Notes: <%=@note.blog%></p>
+<p><%=@note.blog%></p>
 
-<h3>My Image Gallery</h3>
+<img src ="<%=@note.img_url%>">
 
-<img src ="<%=@note.img_url%>" class="note_pic">
-<br></br>
+<%= button_to("Edit this note", edit_note_path(@note), method: :get)%>
 
-<%=link_to("Edit this note", edit_note_path(@note), method: :get, class: "btn")%>
-<%=link_to("Delete this Note", note_path(@note), method: :delete, class: "btn")%>
+<%= button_to("Delete this note.", note_path(@note), method: :delete)%>
 
-
-
+<%= button_to("Back to my profile", user_path(session[:user_id]), method: :get) %>
 
 

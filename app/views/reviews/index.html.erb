@@ -1,20 +1,6 @@
+<h1>All Reviews</h1>
 
-
-   <div class="split left">
-    <div class="centered">
-        <img src="https://i.pinimg.com/originals/b0/bf/9c/b0bf9c3c48317814da40be4c081a0bd1.jpg">
-        </div>
-    </div>
-
-<div class="split right">
-  <div class="right_side_list">
-    <h1>All Reviews</h1>
-    <% @reviews.each do |review| %>
-<ul>
-    
-    <i><i class='fas fa-home'></i><%= link_to(review.title, review_path(review))%></i>
-    <p class="planets_name">Planet: <%= review.planet.name %> </p>
-</ul>
-<%end%>
-  </div>
-</div>
+<% @reviews.each do |review| %>
+    <p>Planet: <%= review.planet.name %> </p>
+   <li><%= link_to(review.title, review_path(review))%></li>
+   <%end%>

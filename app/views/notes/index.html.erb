@@ -9,11 +9,16 @@
 
 <div class="split right">
   <div class="right_side_list">
-    <h1>My Journal.</h1>
+  
+    <h1>My Journal</h1>
     <%@notes.each do |note|%>
 <ul>
     <i class='fas fa-pen-nib'></i><i><%=link_to("Field Notes on #{note.title}", note_path(note))%></i>
 </ul>
 <%end%>
+
+<div class"new_note">
+      <%=link_to("Create a note", new_note_path(@note), method: :get, class: "btn")%>
+  </div>
   </div>
 </div>

@@ -20,24 +20,10 @@
   }
 
 
-  body, html {
-    height: 100%;
-    
-}
-/* 
-/* The hero image */
-
 
 
 
 /* carousel */
-@import url("https://fonts.googleapis.com/css?family=Roboto:900");
-/**
-  * style variables
-*/
-/**
-  * Control & indicator mixin
-*/
 .carousel {
   height: 400px;
   width: auto;
@@ -46,21 +32,6 @@
   position: relative;
   padding: 0;
   list-style: none;
-/**
-  * Where the magic happens
-  */
-/**
-    * Control element - right/left arrows
-  */
-/**
-    * Element for holding slide indicators
-  */
-/**
-    * Indicator for indicating active slide
-  */
-/**
-    * Create rules for when slides are contained within a track
-  */
 }
 .carousel__controls,
 .carousel__activator {
@@ -312,9 +283,4 @@
   background-image: url("https://pm1.narvii.com/5904/da561f7dba38523b765fb247c9d220268d7d3adc_hq.jpg");
   background-size: cover;
   background-position: center;
-}
-
-.img {
-  height: "150px";
-  width: "100px";
 }

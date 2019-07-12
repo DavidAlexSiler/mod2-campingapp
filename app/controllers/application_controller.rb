@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
     helper_method :current_user
     after_action :track_action
 
+
     
     
     def current_user

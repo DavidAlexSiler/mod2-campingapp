@@ -1,10 +1,15 @@
 
 <h1>Planet Name: <%=@review.planet.name%></h1>
-<h3>Trip rating: <%=@review.rating%></h3>
-<h3>Review Title: <%=@review.title%></h3>
-<h3>User Name: <%=@review.user.name%></h3>
-<h3>Review: <%=@review.planet_review%></h3>
-     <%= link_to("Delete this review",
-            review_path(@review), method: :delete) %>
-<h3>Images taken by <%= @review.user.name %></h3>
-<img src= "<%= @review.img_url %>" width= "400" height="200">
+<p>Trip rating: <i><%=@review.rating%></p></i>
+<p>Review Title: <i><%=@review.title%></p></i>
+<p>User Name: <i><%=@review.user.name%></p></i>
+<p>Review: <i><%=@review.planet_review%></p></i>
+<br></br>
+ <div>   
+<h4>Images by <i><%= @review.user.name %></h4></i>
+<img src= "<%= @review.img_url %>" id="review_img">
+</div>
+
+
+ <br></br>
+ <%= link_to("Delete this review", review_path(@review), method: :delete, class:"btn") %>
